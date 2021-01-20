@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Looping</title>
+
+    <!--Vue link-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ test }}</h1>
+
+        <h2>Movie stars array</h2>
+        <ul v-for="star, index in stars">
+            <li>A movie star: {{ star }}</li>
+        </ul>
+        
+        <h2>More info</h2>
+        <ul v-for="(person, arrayIndex) in starsWithAge">
+            <li>{{ arrayIndex }}</li>
+            <li>{{ person.name }}</li>
+            <li>{{ person.age }}</li>
+        </ul>
+        
+        <h2>Meals</h2>
+        <div v-for="(meal, arrayIndex) in veganRecipies">
+            <p>{{ arrayIndex }}</p>
+            <p>Name: {{ meal.name }}</p>
+            <p>{{ meal.ingredient1 }}</p>
+            <p>{{ meal.ingredient2 }}</p>
+        </div>
+
+        <h2>Array in array</h2>
+        <div v-for="(meal, arrayIndex) in veganRecipies2">
+            <p>{{ arrayIndex }}</p>
+            <p>Name: {{ meal.name }}</p>
+            <div v-for="(ingredient) in meal.ingredientsArray">
+                <p>{{ ingredient }}</p>
+            </div>
+        </div>
+
+        <h2>With if statement</h2>
+        <div v-for="(meal, arrayIndex) in veganRecipies">
+            <p v-if=""></p>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
