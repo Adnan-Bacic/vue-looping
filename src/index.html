@@ -44,7 +44,9 @@
 
         <h2>With if statement</h2>
         <div v-for="(meal, arrayIndex) in veganRecipies">
-            <p v-if=""></p>
+            <div v-if="meal.name === 'Oatmeal'">
+                <p>{{ meal.name }}</p>
+            </div>
         </div>
     </div>
 
