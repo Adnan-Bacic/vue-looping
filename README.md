@@ -1,2 +1,2 @@
-# looping
+# vue-looping
 looping in vue
